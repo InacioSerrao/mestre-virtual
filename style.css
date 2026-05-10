@@ -459,3 +459,52 @@ table th:nth-child(9) { text-align: center; width: 50px; }
 .destaque-vermelho { color: var(--accent-red); }
 .destaque-dourado  { color: var(--accent-gold); }
 .destaque-azul     { color: var(--accent-blue); }
+
+/* --- FILTROS DA ABA DE REGRAS --- */
+.filtros-regras {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+.filtro-btn {
+    background: var(--bg-body);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+    padding: 6px 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 20px;
+    font-family: var(--font-ui);
+    transition: all 0.2s ease;
+}
+.filtro-btn:hover { color: var(--text-primary); border-color: var(--text-secondary); }
+.filtro-btn.active { background: var(--text-primary); color: var(--bg-body); border-color: var(--text-primary); font-weight: 600; }
+
+/* Cards de ação (borda dourada em vez de roxa) */
+.regra-card--acao { border-left-color: var(--accent-gold); }
+.regra-card--acao:hover { border-color: var(--accent-gold); }
+.regra-card--acao .regra-titulo {
+    color: var(--accent-gold);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Badge de custo da ação */
+.regra-tag-custo {
+    font-size: 0.65rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+.custo-acao   { background: rgba(92, 115, 230, 0.15); color: #8da4ff; border: 1px solid rgba(92, 115, 230, 0.3); }
+.custo-reacao { background: rgba(224, 49, 49, 0.15);  color: #ff8787; border: 1px solid rgba(224, 49, 49, 0.3); }
+.custo-bonus  { background: rgba(245, 192, 79, 0.15); color: var(--accent-gold); border: 1px solid rgba(245, 192, 79, 0.3); }
+.custo-ataque { background: rgba(112, 72, 232, 0.15); color: #b197fc; border: 1px solid rgba(112, 72, 232, 0.3); }

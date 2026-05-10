@@ -535,6 +535,15 @@ function clearLog() {
 // ==========================================
 // LÓGICA DE BUSCA DAS REGRAS
 // ==========================================
+let categoriaFiltroAtivo = 'todas';
+
+function filtrarCategoria(cat, btn) {
+    categoriaFiltroAtivo = cat;
+    document.querySelectorAll('.filtro-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    filtrarRegras();
+}
+
 function filtrarRegras() {
     const termoBusca = document.getElementById('buscaRegras').value.toLowerCase();
     const cardsRegras = document.querySelectorAll('.regra-card');
@@ -542,12 +551,12 @@ function filtrarRegras() {
     cardsRegras.forEach(card => {
         const titulo = card.querySelector('.regra-titulo').innerText.toLowerCase();
         const conteudo = card.innerText.toLowerCase();
+        const categoriaCard = card.dataset.categoria || 'condicao';
 
-        if (titulo.includes(termoBusca) || conteudo.includes(termoBusca)) {
-            card.style.display = 'block';
-        } else {
-            card.style.display = 'none';
-        }
+        const textoMatch = !termoBusca || titulo.includes(termoBusca) || conteudo.includes(termoBusca);
+        const categoriaMatch = categoriaFiltroAtivo === 'todas' || categoriaCard === categoriaFiltroAtivo;
+
+        card.style.display = (textoMatch && categoriaMatch) ? 'block' : 'none';
     });
 }
 
