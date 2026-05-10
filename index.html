@@ -197,15 +197,11 @@
             <input type="text" id="buscaRegras" class="barra-busca" placeholder="🔍 Buscar condição ou regra..." onkeyup="filtrarRegras()">
         </div>
 
-        <div class="filtros-regras">
-            <button class="filtro-btn active" onclick="filtrarCategoria('todas', this)">Todas</button>
-            <button class="filtro-btn" onclick="filtrarCategoria('condicao', this)">Condições</button>
-            <button class="filtro-btn" onclick="filtrarCategoria('acao', this)">Ações</button>
-        </div>
+        <h2 class="secao-titulo">🛡️ Condições</h2>
 
         <div class="regras-grid" id="listaRegras">
 
-            <div class="regra-card" data-categoria="condicao">
+            <div class="regra-card">
                 <div class="regra-titulo">Enfeitiçado</div>
                 <ul>
                     <li><span class="regra-destaque">Não pode atacar</span> ou mirar magias nocivas no conjurador.</li>
@@ -213,14 +209,14 @@
                 </ul>
             </div>
 
-            <div class="regra-card" data-categoria="condicao">
+            <div class="regra-card">
                 <div class="regra-titulo">Envenenado</div>
                 <ul>
                     <li>Sofre <span class="regra-destaque destaque-vermelho">Desvantagem</span> em ataques e testes de habilidade.</li>
                 </ul>
             </div>
 
-            <div class="regra-card" data-categoria="condicao">
+            <div class="regra-card">
                 <div class="regra-titulo">Impedido</div>
                 <ul>
                     <li><span class="regra-destaque">Deslocamento 0</span> (bônus não se aplicam).</li>
@@ -230,17 +226,17 @@
                 </ul>
             </div>
 
-            <div class="regra-card" data-categoria="condicao">
+            <div class="regra-card">
                 <div class="regra-titulo">Incapacitado</div>
                 <ul>
                     <li><span class="regra-destaque">Não pode realizar Ações ou Reações.</span></li>
                 </ul>
             </div>
 
-            <div class="regra-card" data-categoria="condicao">
+            <div class="regra-card">
                 <div class="regra-titulo">Inconsciente</div>
                 <ul>
-                    <li>Está <span class="regra-destaque">Incapacitado</span>, cai e larga itens.</li>
+                    <li>Está <span class="regra-destaque">Incapacitado</span>, cai caída e larga itens.</li>
                     <li>Não se move, não fala, não percebe arredores.</li>
                     <li>Resistências de FOR e DES: <span class="regra-destaque destaque-vermelho">Falha Automática</span>.</li>
                     <li>Ataques contra a criatura: <span class="regra-destaque destaque-verde">Vantagem</span>.</li>
@@ -248,7 +244,7 @@
                 </ul>
             </div>
 
-            <div class="regra-card" data-categoria="condicao">
+            <div class="regra-card">
                 <div class="regra-titulo">Exaustão</div>
                 <ul>
                     <li>Possui <span class="regra-destaque">6 Níveis</span> no total.</li>
@@ -258,7 +254,7 @@
                 </ul>
             </div>
 
-            <div class="regra-card" data-categoria="condicao">
+            <div class="regra-card">
                 <div class="regra-titulo">Invisível</div>
                 <ul>
                     <li>Impossível ver sem magia/sentidos. Deixa rastros/som.</li>
@@ -268,7 +264,7 @@
                 </ul>
             </div>
 
-            <div class="regra-card" data-categoria="condicao">
+            <div class="regra-card">
                 <div class="regra-titulo">Paralisado</div>
                 <ul>
                     <li>Está <span class="regra-destaque">Incapacitado</span>. Não se move ou fala.</li>
@@ -278,7 +274,7 @@
                 </ul>
             </div>
 
-            <div class="regra-card" data-categoria="condicao">
+            <div class="regra-card">
                 <div class="regra-titulo">Petrificado</div>
                 <ul>
                     <li>Vira pedra inanimada. Peso x10. Não envelhece.</li>
@@ -289,171 +285,10 @@
                 </ul>
             </div>
 
-            <div class="regra-card" data-categoria="condicao">
+            <div class="regra-card">
                 <div class="regra-titulo">Surdo</div>
                 <ul>
                     <li>Testes que exijam audição: <span class="regra-destaque destaque-vermelho">Falha Automática</span>.</li>
-                </ul>
-            </div>
-
-            <!-- ── AÇÕES ── -->
-
-            <div class="regra-card regra-card--acao" data-categoria="acao">
-                <div class="regra-titulo">
-                    Ataque
-                    <span class="regra-tag-custo custo-acao">1 Ação</span>
-                </div>
-                <ul>
-                    <li>Realiza um ataque <span class="regra-destaque">corpo-a-corpo</span> ou <span class="regra-destaque">à distância</span>.</li>
-                    <li>Certas habilidades permitem <span class="regra-destaque destaque-dourado">Ataques Adicionais</span> com esta ação.</li>
-                </ul>
-            </div>
-
-            <div class="regra-card regra-card--acao" data-categoria="acao">
-                <div class="regra-titulo">
-                    Ajudar
-                    <span class="regra-tag-custo custo-acao">1 Ação</span>
-                </div>
-                <ul>
-                    <li>Aliado ganha <span class="regra-destaque destaque-verde">Vantagem</span> no próximo teste de habilidade (antes do seu próximo turno).</li>
-                    <li><em>Ou:</em> aliado ganha <span class="regra-destaque destaque-verde">Vantagem</span> no 1º ataque contra inimigo a <span class="regra-destaque">≤1,5m</span> de você.</li>
-                </ul>
-            </div>
-
-            <div class="regra-card regra-card--acao" data-categoria="acao">
-                <div class="regra-titulo">
-                    Conjurar uma Magia
-                    <span class="regra-tag-custo custo-acao">Variável</span>
-                </div>
-                <ul>
-                    <li>Tempo varia por magia: <span class="regra-destaque destaque-azul">1 Ação</span>, <span class="regra-destaque destaque-vermelho">Reação</span>, minutos, etc.</li>
-                    <li>Consulte o tempo de conjuração de cada magia individualmente.</li>
-                </ul>
-            </div>
-
-            <div class="regra-card regra-card--acao" data-categoria="acao">
-                <div class="regra-titulo">
-                    Desengajar
-                    <span class="regra-tag-custo custo-acao">1 Ação</span>
-                </div>
-                <ul>
-                    <li>Movimento não provoca <span class="regra-destaque">Ataques de Oportunidade</span> pelo resto do turno.</li>
-                </ul>
-            </div>
-
-            <div class="regra-card regra-card--acao" data-categoria="acao">
-                <div class="regra-titulo">
-                    Disparada
-                    <span class="regra-tag-custo custo-acao">1 Ação</span>
-                </div>
-                <ul>
-                    <li>Ganha deslocamento extra igual ao seu <span class="regra-destaque">deslocamento base</span> neste turno.</li>
-                    <li>Ex: 9m base → pode mover até <span class="regra-destaque destaque-dourado">18m</span> no turno.</li>
-                </ul>
-            </div>
-
-            <div class="regra-card regra-card--acao" data-categoria="acao">
-                <div class="regra-titulo">
-                    Esconder
-                    <span class="regra-tag-custo custo-acao">1 Ação</span>
-                </div>
-                <ul>
-                    <li>Faz teste de <span class="regra-destaque destaque-azul">DES (Furtividade)</span>.</li>
-                    <li>Sucesso: ganha benefícios de <span class="regra-destaque">Atacante Não Visto</span>.</li>
-                </ul>
-            </div>
-
-            <div class="regra-card regra-card--acao" data-categoria="acao">
-                <div class="regra-titulo">
-                    Esquivar
-                    <span class="regra-tag-custo custo-acao">1 Ação</span>
-                </div>
-                <ul>
-                    <li>Até o próximo turno: ataques contra você têm <span class="regra-destaque destaque-vermelho">Desvantagem</span> (se puder ver o atacante).</li>
-                    <li>Testes de Destreza: <span class="regra-destaque destaque-verde">Vantagem</span>.</li>
-                    <li>Perde se ficar <span class="regra-destaque">Incapacitado</span> ou deslocamento = 0.</li>
-                </ul>
-            </div>
-
-            <div class="regra-card regra-card--acao" data-categoria="acao">
-                <div class="regra-titulo">
-                    Preparar
-                    <span class="regra-tag-custo custo-reacao">Ação + Reação</span>
-                </div>
-                <ul>
-                    <li>Declare um <span class="regra-destaque">gatilho perceptível</span> e a ação ou deslocamento de resposta.</li>
-                    <li>Usa <span class="regra-destaque destaque-vermelho">Reação</span> ao gatilho (válido até o início do próximo turno).</li>
-                    <li>Preparar magia: exige <span class="regra-destaque">Concentração</span>. Se quebrada, magia é dissipada.</li>
-                </ul>
-            </div>
-
-            <div class="regra-card regra-card--acao" data-categoria="acao">
-                <div class="regra-titulo">
-                    Procurar
-                    <span class="regra-tag-custo custo-acao">1 Ação</span>
-                </div>
-                <ul>
-                    <li>Mestre solicita teste de <span class="regra-destaque destaque-azul">SAB (Percepção)</span> ou <span class="regra-destaque destaque-azul">INT (Investigação)</span>.</li>
-                </ul>
-            </div>
-
-            <div class="regra-card regra-card--acao" data-categoria="acao">
-                <div class="regra-titulo">
-                    Usar um Objeto
-                    <span class="regra-tag-custo custo-acao">1 Ação</span>
-                </div>
-                <ul>
-                    <li>Use itens que requerem uma <span class="regra-destaque">ação</span> para serem ativados.</li>
-                    <li>Ou interaja com <span class="regra-destaque">mais de 1 objeto</span> por turno.</li>
-                </ul>
-            </div>
-
-            <div class="regra-card regra-card--acao" data-categoria="acao">
-                <div class="regra-titulo">
-                    Ataque de Oportunidade
-                    <span class="regra-tag-custo custo-reacao">Reação</span>
-                </div>
-                <ul>
-                    <li>Disparado: inimigo visível <span class="regra-destaque">sai do seu alcance</span>.</li>
-                    <li>Use sua <span class="regra-destaque destaque-vermelho">Reação</span> → realiza um ataque corpo-a-corpo.</li>
-                    <li><span class="regra-destaque">Não ocorre</span> com: Desengajar, teleporte ou movimento forçado.</li>
-                </ul>
-            </div>
-
-            <div class="regra-card regra-card--acao" data-categoria="acao">
-                <div class="regra-titulo">
-                    Duas Armas
-                    <span class="regra-tag-custo custo-bonus">Ação Bônus</span>
-                </div>
-                <ul>
-                    <li>Após atacar com arma corpo-a-corpo <span class="regra-destaque">Leve</span>: use <span class="regra-destaque destaque-dourado">Ação Bônus</span> para atacar com outra arma <span class="regra-destaque">Leve</span> na outra mão.</li>
-                    <li><span class="regra-destaque destaque-vermelho">Não adiciona</span> modificador de habilidade ao dano extra (exceto se negativo).</li>
-                </ul>
-            </div>
-
-            <div class="regra-card regra-card--acao" data-categoria="acao">
-                <div class="regra-titulo">
-                    Agarrão
-                    <span class="regra-tag-custo custo-ataque">Substitui 1 Ataque</span>
-                </div>
-                <ul>
-                    <li>Alvo: até <span class="regra-destaque">1 categoria maior</span>, ao alcance. Exige <span class="regra-destaque">1 mão livre</span>.</li>
-                    <li>Teste resistido: <span class="regra-destaque destaque-azul">FOR (Atletismo)</span> vs <span class="regra-destaque destaque-azul">FOR (Atletismo)</span> ou <span class="regra-destaque destaque-azul">DES (Acrobacia)</span>.</li>
-                    <li>Sucesso: alvo fica <span class="regra-destaque destaque-vermelho">Agarrado</span>.</li>
-                    <li>Escape: <span class="regra-destaque">1 Ação</span> + mesmo teste resistido.</li>
-                    <li>Mover agarrado: deslocamento cai pela <span class="regra-destaque destaque-vermelho">metade</span>.</li>
-                </ul>
-            </div>
-
-            <div class="regra-card regra-card--acao" data-categoria="acao">
-                <div class="regra-titulo">
-                    Encontrão
-                    <span class="regra-tag-custo custo-ataque">Substitui 1 Ataque</span>
-                </div>
-                <ul>
-                    <li>Alvo: até <span class="regra-destaque">1 categoria maior</span>, ao alcance.</li>
-                    <li>Teste resistido: <span class="regra-destaque destaque-azul">FOR (Atletismo)</span> vs <span class="regra-destaque destaque-azul">FOR (Atletismo)</span> ou <span class="regra-destaque destaque-azul">DES (Acrobacia)</span>.</li>
-                    <li>Sucesso: derruba (condição <span class="regra-destaque destaque-vermelho">Caído</span>) ou empurra <span class="regra-destaque">1,5m</span>.</li>
                 </ul>
             </div>
 
