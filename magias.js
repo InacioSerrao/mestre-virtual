@@ -1,6 +1,140 @@
 // Banco de Dados de Magias
 const magiasData = [
 {
+nome: "Toque Chocante",
+nivel: "Truque",
+escola: "Evocação",
+classes: "Mago",
+tempo: "Uma Ação",
+alcance: "Toque",
+componentes: "V, S",
+duracao: "Instantânea",
+resumo: `
+<p>Faça um <strong style="color:#FFD54F;">ataque corpo a corpo com magia</strong> contra uma criatura. Você tem <strong style="color:#FFD54F;">vantagem</strong> se ela estiver usando armadura de metal.</p>
+
+    <p>Se atingir, causa <strong style="color:#EF9A9A;">1d8 de dano elétrico</strong> e impede o alvo de usar <strong style="color:#FFD54F;">reações</strong> até o início do próximo turno dele. O dano aumenta para <strong style="color:#FFD54F;">2d8</strong> no 5º nível, <strong style="color:#FFD54F;">3d8</strong> no 11º e <strong style="color:#FFD54F;">4d8</strong> no 17º.</p>
+`,
+descricao: "<p>Eletricidade surge da sua mão para transmitir um choque em uma criatura que você tentar tocar. Faça um ataque corpo-a-corpo com magia contra o alvo. Você tem vantagem na jogada de ataque se o alvo estiver vestindo qualquer armadura de metal.</p><p>Se atingir, o alvo sofre 1d8 de dano elétrico e não pode usar reações até o início do próximo turno dele.</p><p>O dano da magia aumenta em 1d8 quando você alcança o 5° nível (2d8), 11° nível (3d8) e 17° nível (4d8).</p>",
+fonte: ""
+
+},
+{
+nome: "Raio de Fogo",
+nivel: "Truque",
+escola: "Evocação",
+classes: "Mago",
+tempo: "Uma Ação",
+alcance: "36 metros",
+componentes: "V, S",
+duracao: "Instantânea",
+resumo: `
+<p>Faça um <strong style="color:#FFD54F;">ataque à distância com magia</strong> contra uma criatura ou objeto. Se atingir, causa <strong style="color:#EF9A9A;">1d10 de dano de fogo</strong>.</p>
+
+    <p>Objetos inflamáveis atingidos <strong style="color:#EF9A9A;">incendeiam</strong> se não estiverem sendo vestidos ou carregados. O dano aumenta para <strong style="color:#FFD54F;">2d10</strong> no 5º nível, <strong style="color:#FFD54F;">3d10</strong> no 11º e <strong style="color:#FFD54F;">4d10</strong> no 17º.</p>
+`,
+descricao: "<p>Você arremessa um cisco de fogo em uma criatura ou objeto dentro do alcance. Faça um ataque à distância com magia contra o alvo. Se atingir, o alvo sofre 1d10 de dano de fogo.</p><p>Um objeto inflamável atingido por essa magia, incendeia se não estiver sendo vestido ou carregado.</p><p>O dano dessa magia aumenta em 1d10 quando você alcança o 5° nível (2d10), 11° nível (3d10) e 17° nível (4d10).</p>",
+fonte: ""
+
+},
+{
+nome: "Proteção Contra Lâminas",
+nivel: "Truque",
+escola: "Abjuração",
+classes: "Mago",
+tempo: "Uma Ação",
+alcance: "Pessoal",
+componentes: "V, S",
+duracao: "1 rodada",
+resumo: `<p>Até o final do seu próximo turno, você ganha <strong style="color:#FFD54F;">resistência a dano de concussão, cortante e perfurante</strong> causado por <strong style="color:#FFD54F;">ataques com armas</strong>.</p>` ,
+descricao: "<p>Você estende suas mãos e desenha um símbolo de proteção no ar. Até o final do seu próximo turno, você terá resistência contra dano de concussão, cortante e perfurante causado por ataques com armas.</p>",
+fonte: ""
+},
+{
+nome: "Prestidigitação",
+nivel: "Truque",
+escola: "Transmutação",
+classes: "Mago",
+tempo: "Uma Ação",
+alcance: "3 metros",
+componentes: "V, S",
+duracao: "Até 1 hora",
+resumo: `
+<p>Cria um dos seguintes efeitos mágicos no alcance: <strong style="color:#FFD54F;">efeito sensorial inofensivo</strong>; acender/apagar vela, tocha ou pequena fogueira; limpar/sujar objeto de até <strong style="color:#FFD54F;">1 m³</strong>; esfriar, esquentar ou melhorar o sabor de matéria inorgânica de até <strong style="color:#FFD54F;">1 m³</strong> por 1 hora; criar <strong style="color:#FFD54F;">cor, marca ou símbolo</strong> por 1 hora; ou criar uma <strong style="color:#CE93D8;">bugiganga não-mágica ou imagem ilusória</strong> que caiba na mão, até o final do próximo turno.</p>
+
+    <p>Ao conjurá-la várias vezes, você pode manter até <strong style="color:#FFD54F;">3 efeitos não-instantâneos</strong> ativos. Pode dissipar um deles com uma <strong style="color:#FFD54F;">ação</strong>.</p>
+`,
+descricao: "<p>Essa magia é um truque mágico simples que conjuradores iniciantes usam para praticar. Você cria um dos seguintes efeitos mágicos dentro do alcance:</p><p>• Você cria, instantaneamente, um efeito sensorial inofensivo, como uma chuva de faíscas, um sopro de vento, notas musicais suaves ou um odor estranho.</p><p>• Você, instantaneamente, acende ou apaga uma vela, uma tocha ou uma pequena fogueira.</p><p>• Você, instantaneamente, limpa ou suja um objeto de até 1 metro cúbico.</p><p>• Você esfria, esquenta ou melhora o sabor de até 1 metro cubico de matéria inorgânica por 1 hora.</p><p>• Você faz uma cor, uma pequena marca ou um símbolo aparecer em um objeto ou superfície por 1 hora.</p><p>• Você cria uma bugiganga não-mágica ou uma imagem ilusória que caiba na sua mão e que dura até o final do seu próximo turno.</p><p>Se você conjurar essa magia diversas vezes, você pode ter até três dos seus efeitos não-instantâneos ativos, ao mesmo tempo, e você pode dissipar um desses efeitos com uma ação.</p>",
+fonte: ""
+
+},
+{
+nome: "Globos de Luz",
+nivel: "Truque",
+escola: "Evocação",
+classes: "Artífice, Bardo, Feiticeiro, Mago",
+tempo: "Uma Ação",
+alcance: "36 metros",
+componentes: "V, S, M (um pouco de fósforo ou wychwood ou um inseto luminoso)",
+duracao: "Concentração, até 1 minuto",
+resumo: `
+<p>Cria até <strong style="color:#FFD54F;">4 luzes</strong> que podem parecer tochas, lanternas, esferas luminosas ou uma forma humanoide Média. Cada uma produz <strong style="color:#FFD54F;">penumbra em 3 m</strong>.</p>
+
+    <p>Com uma <strong style="color:#FFD54F;">ação bônus</strong>, mova as luzes até <strong style="color:#FFD54F;">18 m</strong> para um novo local dentro do alcance. Elas devem ficar a pelo menos <strong style="color:#FFD54F;">6 m</strong> umas das outras e desaparecem se saírem dos <strong style="color:#FFD54F;">36 m</strong> de alcance.</p>
+`,
+descricao: "<p>Você cria até quatro luzes do tamanho de tochas dentro do alcance, fazendo-as parecerem tochas, lanternas ou esferas luminosas que flutuam no ar pela duração. Você também pode combinar as quatro luzes em uma forma luminosa, vagamente humanoide, de tamanho Médio. Qualquer que seja a forma que você escolher, cada luz produz penumbra num raio de 3 metros.</p><p>Com uma ação bônus, no seu turno, você pode mover as luzes, até 18 metros, para um novo local dentro do alcance. Uma luz deve estar a, pelo menos, 6 metros de outra luz criada por essa magia e uma luz some se exceder o alcance da magia.</p>",
+fonte: ""
+
+},
+{
+nome: "Espirro Ácido",
+nivel: "Truque",
+escola: "Conjuração",
+classes: "Artífice, Feiticeiro, Mago",
+tempo: "Uma Ação",
+alcance: "18 metros",
+componentes: "V, S",
+duracao: "Instantânea",
+resumo: `
+<p>Escolha <strong style="color:#FFD54F;">1 criatura</strong> no alcance ou <strong style="color:#FFD54F;">2 criaturas a até 1,5 m</strong> uma da outra. Cada alvo faz um <strong style="color:#FFD54F;">teste de resistência de Destreza</strong> ou sofre <strong style="color:#EF9A9A;">1d6 de dano ácido</strong>.</p>
+
+    <p><strong style="color:#FFD54F;">Dano aumenta:</strong> 2d6 no 5º nível, 3d6 no 11º e 4d6 no 17º.</p>
+`,
+descricao: "<p>Você arremessa uma bolha de ácido. Escolha uma criatura dentro do alcance, ou escolha duas criaturas dentro do alcance que estejam a 1,5 metro uma da outra. Um alvo deve ser bem sucedido num teste de resistência de Destreza ou sofrerá 1d6 de dano ácido.</p><p>O dano dessa magia aumenta em 1d6 quando você alcança o 5° nível (2d6), 11° nível (3d6) e 17° nível (4d6).</p>",
+fonte: ""
+
+},
+{
+nome: "Ataque Certeiro",
+nivel: "Truque",
+escola: "Adivinhação",
+classes: "Bardo, Bruxo, Feiticeiro, Mago",
+tempo: "Uma Ação",
+alcance: "9 metros",
+componentes: "S",
+duracao: "Concentração, até 1 rodada",
+resumo: `<p>Escolha uma criatura no alcance. No <strong style="color:#FFD54F;">próximo turno</strong>, seu primeiro ataque contra ela terá <strong style="color:#FFD54F;">vantagem</strong>, desde que a magia ainda esteja ativa.</p>` ,
+descricao: "<p>Você estende sua mão e aponta o dedo para um alvo no alcance. Sua magia garante a você uma breve intuição sobre as defesas do alvo.</p><p>No seu próximo turno, você terá vantagem na primeira jogada de ataque contra o alvo, considerando que essa magia não tenha acabado.</p>",
+fonte: ""
+},
+{
+nome: "Consertar",
+nivel: "Truque",
+escola: "Transmutação",
+classes: "Artífice, Bardo, Clérigo, Druida, Feiticeiro, Mago",
+tempo: "1 minuto",
+alcance: "Toque",
+componentes: "V, S, M (dois ímãs)",
+duracao: "Instantânea",
+resumo: `
+<p>Repara uma <strong style="color:#FFD54F;">quebra ou fissura</strong> de até <strong style="color:#FFD54F;">30 cm</strong> em um objeto, restaurando-o sem deixar vestígios do dano.</p>
+
+    <p>Pode reparar fisicamente <strong style="color:#CE93D8;">itens mágicos e constructos</strong>, mas não restaura suas propriedades mágicas.</p>
+`,
+descricao: "<p>Essa magia repara um única quebra ou fissura em um objeto que você tocar, como um elo quebrado de uma corrente, duas metades de uma chave partida, um manto rasgado ou o vazamento em um odre.</p><p>Contanto que a quebra ou fissura não tenha mais de 30 centímetros em qualquer dimensão, você pode remendá-la, não deixando qualquer vestígio do dano anterior.</p><p>Essa magia pode reparar fisicamente um item mágico ou constructo, mas a magia não irá restaurar a magia em tais objetos.</p>",
+fonte: ""
+
+},
+{
     nome: "Disfarçar-se",
     nivel: "1° Círculo",
     escola: "Ilusão",
